@@ -1,7 +1,6 @@
-from playwright.sync_api import sync_playwright
 import pytest
-from utils.config import HEADLESS
-
+from playwright.sync_api import sync_playwright
+from config.config import HEADLESS
 
 @pytest.fixture()
 def page():
@@ -9,11 +8,12 @@ def page():
     with sync_playwright() as p:
 
         browser = p.chromium.launch(
-            headless=True,
+            headless=HEADLESS,
             slow_mo=1000
         )
 
         page = browser.new_page()
+
         yield page
 
         browser.close()
