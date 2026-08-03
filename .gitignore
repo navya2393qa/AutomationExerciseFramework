@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+.venv/
+
+# PyCharm
+.idea/
+
+# Playwright
+playwright-report/
+test-results/
+
+# Reports
+reports/
+screenshots/
+
+# Environment
+.env
+
+# OS Files
+.DS_Store
+Thumbs.db
