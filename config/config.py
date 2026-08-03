@@ -1,11 +1,9 @@
-# Base URL of the application
+import os
+
 BASE_URL = "https://www.saucedemo.com/"
 
-# Browser to launch
 BROWSER = "chromium"
 
-# Launch browser in headed mode
-HEADLESS = False
+HEADLESS = os.getenv("HEADLESS", "False") == "True"
 
-# Default timeout in milliseconds
 TIMEOUT = 10000
